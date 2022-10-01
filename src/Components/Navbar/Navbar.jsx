@@ -1,10 +1,14 @@
 import React from 'react'
-import Block from './Blocks/Block'
+import Blocks from './Blocks/Blocks'
+import Search from './Search/Search'
+import User from './User/User'
 
 const Navbar = () => {
   return (
-    <div>
-        {/* <Block color={'#249D9F'} /> */}
+    <div style={{display: 'flex', flexDirection: 'column', flex: '90%'}}>
+      <User />
+      <Search />
+      <Blocks />
     </div>
   )
 }

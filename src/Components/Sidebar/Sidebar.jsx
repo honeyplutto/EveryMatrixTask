@@ -10,7 +10,7 @@ const Sidebar = () => {
     const { isOpen } = useSelector(state => state.root);
 
     return (
-        <div className='container'>
+        <div style={{flex: '10%'}}>
             <div 
                 className='sidebar' 
                 style={{width: isOpen ? '135px' : '50px',}} 
@@ -22,7 +22,7 @@ const Sidebar = () => {
             </div>
                 
             </div> 
-        </div>
+        </div> 
     )
 }
 

@@ -3,15 +3,21 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Page from './Components/Sidebar/Elements/Page';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Navbar from './Components/Navbar/Navbar';
+import Charts from './Components/Chart/Charts';
+
 
 function App() {
   return (
     <Router>
-      <div style={{display: 'flex', flexDirectory: 'row'}}>
-        <Sidebar />
-        {/* <Navbar /> */}
+      <div style={{display: 'flex', flexDirection: 'row'}}>
+        <div style={{marginRight: '15px'}}>
+          <Sidebar />
+        </div>
+        <div style={{display: 'flex', flexDirection: 'column'}}>
+          <Navbar />
+          <Charts />
+        </div>
       </div>
-        
         {/* <Routes>
             <Route path='/page0' element = {<Page int={1}/>} />
             <Route path='/page1' element = {<Page int={2}/>} />
