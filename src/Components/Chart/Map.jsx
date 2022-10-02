@@ -2,10 +2,11 @@ import React from "react"
 import { ComposableMap, Geographies, Geography } from "react-simple-maps"
 import ChartSelect from "./ChartSelect"
 
-const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json"
-
 export default function MapChart() {
-  return (
+
+    const geoUrl = 'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json'
+
+    return (
         <div style={{flex: '30%' ,border: '0.5px solid grey', padding: '10px'}}>
             <ChartSelect />
             <ComposableMap style={{width: '300px'}}>
@@ -24,5 +25,5 @@ export default function MapChart() {
             </ComposableMap>
 
         </div>
-  )
+    )
 }

@@ -30,7 +30,8 @@ function App() {
             <Route path='/page7' element = {<Page int={8}/>} />
             <Route path='/page8' element = {<Page int={9}/>} />
             <Route path='/page9' element = {<Page int={10}/>} />
-          </Routes>      */}
+          </Routes>      
+          */}
     </Router>
   );
 }

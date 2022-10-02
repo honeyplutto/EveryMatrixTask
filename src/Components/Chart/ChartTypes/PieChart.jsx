@@ -11,7 +11,6 @@ import {
 } from '@syncfusion/ej2-react-charts';
 import { data } from '../ChartInfo/ChartInfo'
 
-
 const PieChart = () => {
 
   return (
