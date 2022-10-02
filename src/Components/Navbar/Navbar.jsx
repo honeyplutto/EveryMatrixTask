@@ -5,7 +5,7 @@ import User from './User/User'
 
 const Navbar = () => {
   return (
-    <div style={{display: 'flex', flexDirection: 'column', flex: '90%'}}>
+    <div style={{display: 'flex', flexDirection: 'column', width: '100%'}}>
       <User />
       <Search />
       <Blocks />

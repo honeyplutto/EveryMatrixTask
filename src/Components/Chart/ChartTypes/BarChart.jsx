@@ -1,35 +1,39 @@
-import React, { useState } from 'react'
-import Chart from "react-apexcharts";
+import React from 'react';
+import { 
+  ChartComponent, 
+  SeriesCollectionDirective, 
+  SeriesDirective, 
+  Inject, 
+  LineSeries, 
+  DateTime, 
+  Legend, 
+  Tooltip 
+} from '@syncfusion/ej2-react-charts';
+import { 
+  lineCustomSeries,
+  LinePrimaryXAxis 
+} from '../ChartInfo/ChartInfo'
+import ChartSelect from '../ChartSelect'
 
-const BarChart = () => {
-    const [state, setState] = useState(
-        {
-        options: {
-            chart: {
-              id: "basic-bar"
-            },
-            xaxis: {
-              categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-            }
-          },
-        series: [
-            {
-              name: "series-1",
-              data: [30, 40, 45, 50, 49, 60, 70, 91]
-            }
-        ]
-        }
-    )
+const LineChart = () => {
 
-    return (
-        <div>
-            <Chart 
-                {...state}
-                type='area'
-                width="600"
-            />
-        </div>
-    )
-}
+  return (
+    <div style={{display: 'flex', flexDirection: 'column', flex: '30%', padding: '5px',  border: '1px solid grey'}}>
+      <ChartSelect />
+      <ChartComponent
+        id="line-chart"
+        height="300px"
+        primaryXAxis={LinePrimaryXAxis}
+        chartArea={{ border: { width: 0 } }}
+        tooltip={{ enable: true }}
+      >
+        <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
+        <SeriesCollectionDirective>
+          {lineCustomSeries.map((item, index) => <SeriesDirective key={index} {...item} />)}
+        </SeriesCollectionDirective>
+      </ChartComponent>
+    </div>  
+  );
+};
 
-export default BarChart
+export default LineChart;

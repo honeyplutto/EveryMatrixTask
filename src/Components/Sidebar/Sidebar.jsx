@@ -13,7 +13,7 @@ const Sidebar = () => {
         <div style={{flex: '10%'}}>
             <div 
                 className='sidebar' 
-                style={{width: isOpen ? '135px' : '50px',}} 
+                style={{width: isOpen ? '135px' : '50px', height: '123vh'}} 
             >
                 <Logo />
             <div style={{display: 'flex', flexDirectory: 'row'}}>

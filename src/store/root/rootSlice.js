@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    isOpen: false
+    isOpen: false,
+    age: '10'
 }
 
 const rootSlice = createSlice({
@@ -10,10 +11,13 @@ const rootSlice = createSlice({
     reducers: {
         setOpen: (state) => {
             state.isOpen = !state.isOpen
+        },
+        setAge: (state, action) => {
+            state.age = action.payload
         }
     }
 })
 
-export const { setOpen } = rootSlice.actions;
+export const { setOpen, setAge } = rootSlice.actions;
 
 export default rootSlice.reducer;

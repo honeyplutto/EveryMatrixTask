@@ -4,18 +4,19 @@ import Page from './Components/Sidebar/Elements/Page';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Navbar from './Components/Navbar/Navbar';
 import Charts from './Components/Chart/Charts';
-
+import Tables from './Components/Table/Tables';
 
 function App() {
   return (
     <Router>
       <div style={{display: 'flex', flexDirection: 'row'}}>
-        <div style={{marginRight: '15px'}}>
+        <div style={{marginRight: '15px', flex: '3%'}}>
           <Sidebar />
         </div>
-        <div style={{display: 'flex', flexDirection: 'column'}}>
+        <div style={{display: 'flex', flexDirection: 'column', height: '100%', flex: '97%'}}>
           <Navbar />
           <Charts />
+          <Tables />
         </div>
       </div>
         {/* <Routes>
@@ -30,7 +31,6 @@ function App() {
             <Route path='/page8' element = {<Page int={9}/>} />
             <Route path='/page9' element = {<Page int={10}/>} />
           </Routes>      */}
-
     </Router>
   );
 }
